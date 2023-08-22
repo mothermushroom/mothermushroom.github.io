@@ -16,6 +16,7 @@ $(function () {
 
 
 
+
   const modals = document.querySelectorAll('.modal');
 
   modals.forEach(modal => {
@@ -43,6 +44,12 @@ $(function () {
     // Bootstrap modal events
     $(modal).on('hidden.bs.modal', () => {
       // Reset modal content on modal hide event
+      modal.querySelector('.modal-dialog').style.left = '50%';
+      modal.querySelector('.modal-dialog').style.top = '50%';
+    });
+
+    $(modal).on('show.bs.modal', () => {
+      // Reset modal position on modal show event
       modal.querySelector('.modal-dialog').style.left = '50%';
       modal.querySelector('.modal-dialog').style.top = '50%';
     });
