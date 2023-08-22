@@ -144,6 +144,13 @@ h2{
     flex-wrap: wrap;
     margin-bottom: 5em;
 }
+
+
+.clickable {
+    cursor:pointer;
+}
+
+
 /*
 .popup
 {
@@ -167,7 +174,7 @@ h2{
     transform: translateZ(5px) translateY(-20px) scale(1.05);
 }
 
-/*.popup-1,
+.popup-1,
 .popup-4
 {
     -webkit-transform: translateZ(1px);
@@ -185,7 +192,7 @@ h2{
 {
     -webkit-transform: translateZ(3px) translateY(-10px);
     transform: translateZ(3px) translateY(-10px);
-}*/
+}
 
 .popup-1:hover ~ .popup-2
 {
@@ -195,12 +202,12 @@ h2{
     transition: .2s;
 }
 
-/*.popup-4
+.popup-4
 {
     -webkit-box-ordinal-group: 6;
     -ms-flex-order: 5;
     order: 5;
-}*/
+}
 
 .popup-4:hover ~ .popup-5
 {
@@ -222,7 +229,7 @@ h2{
 .modal-body img {
     width: 100%;
     height: 100%;
-    object-fit: contain;  /*Maintain aspect ratio without cropping */
+    object-fit: contain; /* Maintain aspect ratio without cropping */
 }
 
 
