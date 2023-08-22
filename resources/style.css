@@ -98,6 +98,29 @@ h2{
 }
 
 
+.container-gallery
+{
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    position: relative;
+    flex-wrap: wrap;
+    margin-bottom: 5em;
+}
+
+
+/* gallery order */
 .popup {
     width: calc(33.33% - 20px); /* Adjust width for 3 cards per row */
     max-width: 250px; /* Maximum width for each card */
@@ -124,30 +147,8 @@ h2{
 }
 
 
-.container-gallery
-{
-    width: 100%;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-perspective: 1000;
-    perspective: 1000;
-    position: relative;
-    flex-wrap: wrap;
-    margin-bottom: 5em;
-}
-
-
-/*
-.popup
+/* stacking order */
+/*.popup
 {
     width: 250px;
     margin: 0 -25px;
@@ -162,30 +163,14 @@ h2{
 }*/
 
 
-
-.popup:not(.no-hover):hover
-{
-    -webkit-transition: .2s;
-    transition: .2s;
-    -webkit-transform: translateZ(5px) translateY(-20px) scale(1.05);
-    transform: translateZ(5px) translateY(-20px) scale(1.05);
-}
-
-
-.popup-1:not(.no-hover):hover ~ .popup-2
-{
-    -webkit-transform: translateZ(4px) translateY(-15px);
-    transform: translateZ(4px) translateY(-15px);
-    -webkit-transition: .2s;
-    transition: .2s;
-}
-
-.popup-4:not(.no-hover):hover ~ .popup-5
-{
-    -webkit-transform: translateZ(3px) translateY(-15px);
-    transform: translateZ(3px) translateY(-15px);
-    -webkit-transition: .1s;
-    transition: .1s;
+@media (hover: hover) {
+    .popup:hover
+    {
+        -webkit-transition: .2s;
+        transition: .2s;
+        -webkit-transform: translateZ(5px) translateY(-20px) scale(1.05);
+        transform: translateZ(5px) translateY(-20px) scale(1.05);
+    }
 }
 
 /* Match modal body size to image dimensions */
