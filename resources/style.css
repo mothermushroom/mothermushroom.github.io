@@ -3,10 +3,14 @@
   --accent-color: #f5d9d5;
 }
 
+html, body{
+    overflow-x: hidden;
+}
+
 body {
     background: var(--main-color);
     font-family: "Potta One", sans-serif;
-    overflow-x: hidden;
+    position: relative;
 }
 
 .content {
