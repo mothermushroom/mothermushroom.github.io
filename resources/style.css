@@ -103,7 +103,7 @@ h2{
     max-width: 250px; /* Maximum width for each card */
     height: 50%; /* Adjust height as needed */
     margin: 10px; /* Adjust margins */
-    /*position: relative;*/
+    position: relative;
     box-shadow: 0px 0px 40px -5px rgba(0, 0, 0, 0.5);
     background-size: cover;
     background-position: center;
