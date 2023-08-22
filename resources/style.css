@@ -1,0 +1,328 @@
+:root {
+  --main-color: white;
+  --accent-color: #f5d9d5;
+}
+
+body {
+/*    background: #f5d9d5;*/
+    background: var(--main-color);
+    font-family: "Potta One", sans-serif;
+}
+
+.content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+
+
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 100;   
+    border-bottom: 1px solid rgba(256, 256, 256, .3);
+}
+
+#mainNavbar .navbar-brand{
+    padding-left: 1em;
+}
+
+#mainNavbar .navbar-brand {
+    color: #EA1C2C;
+    font-size: 1.5rem;
+}
+
+.navbar.scrolled {
+    background: var(--main-color);
+    transition: background 500ms;
+}
+
+#headingGroup span {
+    color: #bf7e76;
+}
+
+#headingGroup h1 {
+    font-weight: 100;
+    font-size: 4rem;
+}
+
+.available-container{
+    background: var(--accent-color);
+    padding: 50px;
+    position:relative;
+}
+
+.available-container:after {
+    content:"";
+    border-color: var(--main-color) transparent transparent transparent;
+    border-style:solid;
+    border-width:30px;
+    position:absolute;
+    top:0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.unavailable-container{
+    background: var(--main-color);;
+    padding: 50px;
+    position:relative;
+}
+
+.unavailable-container:after {
+    content:"";
+    border-color: var(--accent-color) transparent transparent transparent;
+    border-style:solid;
+    border-width:30px;
+    position:absolute;
+    top:0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card-body img{
+    padding: 0;
+}
+
+.card-container{
+    width:75%;
+    margin: auto;
+
+}
+
+.footer-container{
+    background: #A9A9A9 ;
+}
+
+
+.popup {
+    width: calc(33.33% - 20px); /* Adjust width for 3 cards per row */
+    max-width: 250px; /* Maximum width for each card */
+    height: 50%; /* Adjust height as needed */
+    margin: 10px; /* Adjust margins */
+    position: relative;
+    box-shadow: 0px 0px 40px -5px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .container-gallery {
+        justify-content: flex-start; /* Align cards to the left on smaller screens */
+    }
+
+    .popup {
+        width: calc(100% - 20px); /* Adjust width for 2 cards per row */
+    }
+}
+
+
+.container-gallery
+{
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    position: relative;
+    flex-wrap: wrap;
+    margin-bottom: 5em;
+}
+/*
+.popup
+{
+    width: 250px;
+    margin: 0 -25px;
+    position: relative;
+    box-shadow: 0px 0px 40px -5px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    -webkit-transition: .2s;
+    transition: .2s;
+    cursor: pointer;
+}*/
+
+.popup:hover
+{
+    -webkit-transition: .2s;
+    transition: .2s;
+    -webkit-transform: translateZ(5px) translateY(-20px) scale(1.05);
+    transform: translateZ(5px) translateY(-20px) scale(1.05);
+}
+
+.popup-1,
+.popup-4
+{
+    -webkit-transform: translateZ(1px);
+    transform: translateZ(1px);
+}
+
+.popup-2,
+.popup-5
+{
+    -webkit-transform: translateZ(2px) translateY(-5px);
+    transform: translateZ(2px) translateY(-5px);
+}
+
+.popup-3
+{
+    -webkit-transform: translateZ(3px) translateY(-10px);
+    transform: translateZ(3px) translateY(-10px);
+}
+
+.popup-1:hover ~ .popup-2
+{
+    -webkit-transform: translateZ(4px) translateY(-15px);
+    transform: translateZ(4px) translateY(-15px);
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.popup-4
+{
+    -webkit-box-ordinal-group: 6;
+    -ms-flex-order: 5;
+    order: 5;
+}
+
+.popup-4:hover ~ .popup-5
+{
+    -webkit-transform: translateZ(3px) translateY(-15px);
+    transform: translateZ(3px) translateY(-15px);
+    -webkit-transition: .1s;
+    transition: .1s;
+}
+
+/* Match modal body size to image dimensions */
+.modal-body {
+    padding: 0; /* Remove default padding */
+    max-width: 100%; /* Set maximum width to fit the image */
+    max-height: 100vh; /* Set maximum height to fit the viewport */
+    overflow: hidden; /* Hide any potential overflow */
+}
+
+/* Ensure the image fills the modal body */
+.modal-body img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Maintain aspect ratio without cropping */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gtco-testimonials {
+     position: relative;
+     margin-top: 30px;
+}
+ .gtco-testimonials h2 {
+     font-size: 30px;
+     text-align: center;
+     color: #333;
+     margin-bottom: 30px;
+}
+ .gtco-testimonials .owl-stage-outer {
+     padding: 30px 0;
+}
+ .gtco-testimonials .owl-nav {
+     display: none;
+}
+ .gtco-testimonials .owl-dots {
+     text-align: center;
+}
+ .gtco-testimonials .owl-dots span {
+     position: relative;
+     height: 10px;
+     width: 10px;
+     border-radius: 50%;
+     display: block;
+     background: #fff;
+     border: 2px solid #01b0f8;
+     margin: 0 5px;
+}
+ .gtco-testimonials .owl-dots .active {
+     box-shadow: none;
+}
+ .gtco-testimonials .owl-dots .active span {
+     background: #01b0f8;
+     box-shadow: none;
+     height: 12px;
+     width: 12px;
+     margin-bottom: -1px;
+}
+ .gtco-testimonials .card {
+     background: #fff;
+     box-shadow: 0 8px 30px -7px #c9dff0;
+     margin: 0 20px;
+     padding: 0 10px;
+     border-radius: 20px;
+     border: 0;
+}
+ .gtco-testimonials .card .card-img-top {
+     max-width: 100px;
+     border-radius: 50%;
+     margin: 15px auto 0;
+     box-shadow: 0 8px 20px -4px #95abbb;
+     width: 100px;
+     height: 100px;
+}
+
+/* .gtco-testimonials .center .card-img-top {
+     max-width: 100%;
+     height: 120px;
+     width: 120px;
+}*/
+ @media (max-width: 767px) {
+     .gtco-testimonials {
+         margin-top: 20px;
+    }
+}
+ .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+     outline: 0;
+}
+ .owl-carousel button.owl-dot {
+     outline: 0;
+}
+ 
